@@ -5,7 +5,7 @@
  * @a: a char
  * Return: 0
  */
-int print_percentage(char a)
+int print_percentage(char a __attribute__ ((unused)))
 {
-	return (_putchar(a));
+	return (_putchar(37));
 }
