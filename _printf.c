@@ -36,6 +36,12 @@ int _printf(const char *format, ...)
 				case '%':
 					spec_lock += print_percentage((char) va_arg(ap, int));
 					break;
+				case 'i':
+					spec_lock += print_int((int) va_arg(ap, int));
+					break;
+				case 'd':
+					spec_lock += print_dec((float) va_arg(ap, float));
+					break;
 			}
 			len += spec_lock;
 		}
