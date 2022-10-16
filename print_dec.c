@@ -9,6 +9,12 @@
 int print_dec(int i, int count)
 {
 	count = 1;
+	if (i < 0)
+	{
+		_putchar(45);
+		i *= -1;
+		count += 1;
+	}
 	if (i > 9)
 		count += print_int(i / 10, count);
 
