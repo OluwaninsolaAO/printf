@@ -2,10 +2,16 @@
 
 /**
  * print_dec - entry point
- * @d: a dec
- * Return: 0
+ * @i: a dec
+ * @count: putchar count
+ * Return: count
  */
-int print_dec(float d)
+int print_dec(int i, int count)
 {
-	return (_putchar(d));
+	count = 1;
+	if (i > 9)
+		count += print_int(i / 10, count);
+
+	count += _putchar(i % 10 + '0');
+	return (count);
 }

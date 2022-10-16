@@ -1,2 +1,3 @@
 # Ignore the output object file
 output
+*.swp
