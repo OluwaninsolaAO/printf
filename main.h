@@ -9,5 +9,6 @@ int _putchar(char c);
 
 int print_char(char a);
 int print_string(char *a);
+int print_percentage(char a);
 
 #endif  /* MAIN_H */
