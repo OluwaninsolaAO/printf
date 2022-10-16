@@ -10,7 +10,7 @@ int _putchar(char c);
 int print_char(char a);
 int print_string(char *a);
 int print_percentage(char a);
-int print_int(int i);
-int print_dec(float d);
+int print_int(int i, int count);
+int print_dec(int i, int count);
 
 #endif  /* MAIN_H */

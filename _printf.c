@@ -7,14 +7,12 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, len = 0;
+	int i, len = 0, spec_lock = 0;
 	va_list ap;
-	int spec_lock = 0;
 
 	if (format == NULL)
 		return (-1);
 	va_start(ap, format);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (spec_lock)
@@ -22,7 +20,6 @@ int _printf(const char *format, ...)
 			spec_lock = 0;
 			continue;
 		}
-
 		if (format[i] == '%')
 		{
 			switch (format[i + 1])
@@ -37,10 +34,10 @@ int _printf(const char *format, ...)
 					spec_lock += print_percentage((char) va_arg(ap, int));
 					break;
 				case 'i':
-					spec_lock += print_int((int) va_arg(ap, int));
+					spec_lock += print_int(va_arg(ap, int), 0);
 					break;
 				case 'd':
-					spec_lock += print_dec((float) va_arg(ap, double));
+					spec_lock += print_dec(va_arg(ap, int), 0);
 					break;
 			}
 			len += spec_lock;
