@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 					spec_lock += print_int((int) va_arg(ap, int));
 					break;
 				case 'd':
-					spec_lock += print_dec((float) va_arg(ap, float));
+					spec_lock += print_dec((float) va_arg(ap, double));
 					break;
 			}
 			len += spec_lock;
