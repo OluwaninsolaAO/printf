@@ -5,6 +5,10 @@
  * @start: starting address
  * @stop: stopping address
  * @except: except address
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> master
  * Return: number bytes printed
  */
 int print_from_to(char *start, char *stop, char *except)
@@ -24,6 +28,10 @@ int print_from_to(char *start, char *stop, char *except)
  * print_rev - prints string in reverse
  * @ap: string
  * @params: the parameters struct
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> master
  * Return: number bytes printed
  */
 int print_rev(va_list ap, params_t *params)
@@ -47,6 +55,10 @@ int print_rev(va_list ap, params_t *params)
  * print_rot13 - prints string in rot13
  * @ap: string
  * @params: the parameters struct
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> master
  * Return: number bytes printed
  */
 int print_rot13(va_list ap, params_t *params)
@@ -62,7 +74,12 @@ int print_rot13(va_list ap, params_t *params)
 	index = 0;
 	while (a[i])
 	{
+<<<<<<< HEAD
 		if ((a[i] >= 'A' && a[i] <= 'Z') || (a[i] >= 'a' && a[i] <= 'z'))
+=======
+		if ((a[i] >= 'A' && a[i] <= 'Z')
+		    || (a[i] >= 'a' && a[i] <= 'z'))
+>>>>>>> master
 		{
 			index = a[i] - 65;
 			count += _putchar(arr[index]);

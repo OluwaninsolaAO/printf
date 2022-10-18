@@ -5,7 +5,13 @@
  * @format: the format string
  * Return: number of bytes printed
  */
+<<<<<<< HEAD
 int _printf(const char *format, ...)
+=======
+
+int _printf(const char *format, ...)
+
+>>>>>>> master
 {
 	int sum = 0;
 	va_list ap;
@@ -38,11 +44,20 @@ int _printf(const char *format, ...)
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
+<<<<<<< HEAD
 			sum += print_from_to(start, p, params.l_modifier || params.h_modifier ? p - 1 : 0);
+=======
+			sum += print_from_to(start, p,
+					params.l_modifier || params.h_modifier ? p - 1 : 0);
+>>>>>>> master
 		else
 			sum += get_print_func(p, ap, &params);
 	}
 	_putchar(BUF_FLUSH);
 	va_end(ap);
+<<<<<<< HEAD
 	return (sum);	
+=======
+	return (sum);
+>>>>>>> master
 }
